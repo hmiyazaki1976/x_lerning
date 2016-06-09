@@ -41,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div class="col-md-4 col-md-offset-4">
 								<div class="login-panel panel panel-default">
 										<div class="panel-heading">
-												<h3 class="panel-title">サインイン</h3>
+												<h3 class="panel-title">ログイン</h3>
 										</div>
 										<div class="panel-body">
 												<form role="form">
@@ -58,8 +58,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 																		</label>
 																</div>
 																<!-- Change this to a button or input when using this as a form -->
-																<a href="index.html" class="btn btn-lg btn-success btn-block">ログイン</a>
-																<a href="index.html" class="btn btn-lg btn-primary btn-block">新規登録</a>
+																<a href="" class="btn btn-lg btn-success btn-block" id="login_btn">ログイン</a>
+																<a href="" class="btn btn-lg btn-primary btn-block" id="singup_btn">新規登録</a>
 														</fieldset>
 												</form>
 										</div>
@@ -78,6 +78,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- Custom Theme JavaScript -->
     <script src="./dist/js/sb-admin-2.js"></script>
+
+    <script src="./dist/js/x_common.js"></script>
 
 </body>
 

@@ -1,10 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login_ctl extends CI_Controller {
+class UserEntry_ctl extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('login_view');
+		$this->load->view('userentry_view');
 	}
 }

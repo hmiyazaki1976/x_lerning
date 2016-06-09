@@ -12,7 +12,7 @@ class Main_ctl extends CI_Controller {
 			$this->load->view('potal_view');
 			$this->load->view('footer_view');
 		} else {
-			$this->load->view('login_view');
+			redirect( "http://localhost/x_lerning/login_ctl" );
 		}
 	}
 
