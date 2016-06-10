@@ -4,15 +4,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Main_ctl extends CI_Controller {
 
 	public function index()	{
-		if ($this->session->userdata('logged_in'))
+		$loggedFlg = $_session['logged_in'];
+		if (is_null($loggedFlg) ) {
+			redirect( "http://localhost/x_lerning/login_ctl" );
+		} else {
 			$this->load->model('menu_model');
 			$data["results"] = $this->menu_model->get_testkbnList();
 			$this->load->view('header_view');
 			$this->load->view('sidemenu_view', $data);
 			$this->load->view('potal_view');
 			$this->load->view('footer_view');
-		} else {
-			redirect( "http://localhost/x_lerning/login_ctl" );
 		}
 	}
 

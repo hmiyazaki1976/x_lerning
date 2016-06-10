@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>ユーザー登録画面</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -38,10 +38,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <?= session_id(); ?>
 		<div class="container">
 				<div class="row">
-						<div class="col-md-4 col-md-offset-4">
-								<div class="login-panel panel panel-default">
+            <div class="col-md-3">
+            </div>
+						<div class="col-md-6">
+								<div class="userentry-panel panel panel-default">
 										<div class="panel-heading">
-												<h3 class="panel-title">ログイン</h3>
+												<h3 class="panel-title">ユーザー登録</h3>
 										</div>
 										<div class="panel-body">
 												<form role="form" id="values">
@@ -52,19 +54,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 																<div class="form-group">
 																		<input class="form-control" placeholder="Password" name="password" type="password" value="">
 																</div>
-																<div class="checkbox">
-																		<label>
-																				<input name="remember" type="checkbox" value="Remember Me">メールアドレスとパスワードを記憶する
-																		</label>
+                                <div class="form-group">
+																		<input class="form-control" placeholder="rePassword" name="repassword" type="password" value="">
+																</div>
+                                <div class="form-group">
+																		<input class="form-control" placeholder="名前" name="name" value="">
+																</div>
+                                <div class="form-group">
+                                  <div class="row">
+                                    <div class="col-md-6">
+																		  <input class="form-control" placeholder="FastName" name="fastname" value="">
+                                    </div>
+                                    <div class="col-md-6">
+																		  <input class="form-control" placeholder="LastName" name="lastname" value="">
+                                    </div>
+                                  </div>
 																</div>
 																<!-- Change this to a button or input when using this as a form -->
-																<a class="btn btn-lg btn-success btn-block" id="login_btn">ログイン</a>
-																<a class="btn btn-lg btn-primary btn-block" id="singup_btn">新規登録</a>
+																<a class="btn btn-lg btn-success btn-block" id="entry_btn">登録</a>
 														</fieldset>
 												</form>
 										</div>
 								</div>
 						</div>
+            <div class="col-md-3">
+            </div>
 				</div>
 		</div>
     <!-- jQuery -->
@@ -79,7 +93,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Custom Theme JavaScript -->
     <script src="./dist/js/sb-admin-2.js"></script>
 
-    <script src="./dist/js/x_login.js"></script>
+    <script src="./dist/js/x_userentry.js"></script>
 
 </body>
 

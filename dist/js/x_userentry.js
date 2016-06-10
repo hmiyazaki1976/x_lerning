@@ -1,22 +1,24 @@
 $(function () {
   // Submit
-  $('#login_btn').click(function() {
+  $('#entry_btn').click(function() {
 
     // action、methodの指定
     $('#values').attr({
-       'action':'http://localhost/x_lerning/login_ctl',
+       'action':'http://localhost/x_lerning/userentry_ctl/entry_validate',
        'method':'post'
     });
     $('#values').submit();
   });
 
-  $('#singup_btn').click(function() {
+  $('#login_btn').click(function() {
+
     // action、methodの指定
     $('#values').attr({
-       'action':'http://localhost/x_lerning/userentry_ctl',
-       'method':'get'
+       'action':'http://localhost/x_lerning/',
+       'method':'post'
     });
     $('#values').submit();
   });
+
 
 });
