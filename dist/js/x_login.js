@@ -4,7 +4,7 @@ $(function () {
 
     // action、methodの指定
     $('#values').attr({
-       'action':'http://localhost/x_lerning/login_ctl',
+       'action':'http://localhost/x_lerning/',
        'method':'post'
     });
     $('#values').submit();

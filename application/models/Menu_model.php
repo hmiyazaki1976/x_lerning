@@ -16,7 +16,7 @@ class Menu_model extends CI_Model {
     function get_testkbnList() {
       $sql = 'SELECT * FROM `m002_testKbn`';
       if ($result = $this->db->query($sql)) {
-        return $result->result();	;
+        return $result->result();
       } else {
         return -1;
       }

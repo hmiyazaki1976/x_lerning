@@ -27,6 +27,8 @@ class UserEntry_ctl extends CI_Controller {
 			$this->Userentry_model->set_User($data);
 			$newdata = array(
 			        'logged_in'  => TRUE,
+							'email'      => $data['email'],
+							'password'      => $data['password'],
 			        'loginName'  => $data['name'],
 			        'fastName'   => $data['fastname'],
 							'lastName'   => $data['lastname']
