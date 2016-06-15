@@ -14,11 +14,11 @@ class Userentry_model extends CI_Model {
     }
 
     function set_User($data) {
-      $sql = "INSERT INTO `m001_user`(`xid`, `uid`, `email`, `name`, `fastname`,
-       `lastname`, `postcode1`, `post1`, `postcode2`, `post2`,`password`)
-       VALUES ('00001','" . $data['email'] . "','". $data['email'] ."','". $data['name'] ."',
-       '". $data['fastname'] ."','". $data['lastname'] ."','','','','','". $data['password'] ."')";
-       $this->db->query($sql);
+      $sql = "call proc_userentry('" . $data['email'] . "','". $data['name'] ."',
+      '". $data['fastname'] ."','". $data['lastname'] ."','','','','','". $data['password'] ."',@code,@str)";
+      $this->db->query($sql);
+      $sql = "select @code as retcode, @str as retmes";
+      $this->db->query($sql);
     }
 
     function get_User($data) {

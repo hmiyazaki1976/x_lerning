@@ -13,6 +13,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- Metis Menu Plugin JavaScript -->
 <script src="./bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
+<script src="./dist/js/jquery.simplePagination.js"></script>
+
 <!-- Custom Theme JavaScript -->
 <script src="./dist/js/sb-admin-2.js"></script>
 <script src="./dist/js/x_portal.js"></script>

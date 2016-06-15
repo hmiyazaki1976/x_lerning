@@ -1,5 +1,18 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+$email = "";
+$password = "";
+$name = "";
+if (isset($_SESSION['email'])) {
+  $email = $_SESSION['email'];
+}
+if (isset($_SESSION['loginName'])) {
+  $name = $_SESSION['loginName'];
+}
+if (isset($_SESSION['password'])) {
+  $password = $_SESSION['password'];
+}
+
 ?>
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
@@ -15,6 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!-- /.navbar-header -->
             <form id="uivalues">
             <ul class="nav navbar-top-links navbar-right">
+                <?=$name?>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>

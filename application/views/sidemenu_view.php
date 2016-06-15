@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <ul class="nav nav-second-level">
                   <?php foreach ($results as $row) {
                           echo '<li>';
-                          echo '<a href="' . $row->id .'">' . $row->name . '</a>';
+                          echo '<a href="./content_ctl">' . $row->name . '</a>';
                           echo '</li>';
                         }
                   ?>
