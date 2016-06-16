@@ -1,3 +1,4 @@
+// ログアウト
 $(function () {
   // Submit
   $('#logout_btn').click(function() {
@@ -11,6 +12,7 @@ $(function () {
   });
 });
 
+// ページネーション
 $(function(){
   $("#light-pagination").pagination({
     items:3,
@@ -27,3 +29,15 @@ function show(pageNumber) {
   $('.selection').hide();
   $(page).show();
 }
+
+// メニュー操作
+$(function(){
+  $('#master_ask').click(function() {
+    $('#menuvalue').attr({
+      'action':'http://localhost/x_lerning/master_ctl',
+      'method':'post'
+    });
+    $('#accesskbn').val("askmaster");
+    $('#menuvalue').submit();
+  });
+});

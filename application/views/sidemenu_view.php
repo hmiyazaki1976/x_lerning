@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
+<form id='menuvalue'>
+  <input type="hidden" name="accesskbn" id="accesskbn">
 <div class="navbar-default sidebar" role="navigation">
     <div class="sidebar-nav navbar-collapse">
         <ul class="nav" id="side-menu">
@@ -35,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <ul class="nav nav-second-level">
                   <?php foreach ($results as $row) {
                           echo '<li>';
-                          echo '<a href="./content_ctl">' . $row->name . '</a>';
+                          echo '<a href="' . base_url() . 'content_ctl">' . $row->name . '</a>';
                           echo '</li>';
                         }
                   ?>
@@ -46,13 +48,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <a href="#"><i class="fa fa-table fa-fw"></i>管理メニュー<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                   <li>
-                      <a href="flot.html">個人情報</a>
+                      <a id='master_prof'>個人情報</a>
                   </li>
                   <li>
-                      <a href="flot.html">問題編集</a>
+                      <a id='master_ask'>問題編集</a>
                   </li>
                   <li>
-                      <a href="flot.html">試験区分</a>
+                      <a id='master_sikenkbn'>試験区分</a>
                   </li>
                 </ul>
                 <!-- /.nav-second-level -->
@@ -61,5 +63,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
     <!-- /.sidebar-collapse -->
 </div>
+</form>
 <!-- /.navbar-static-side -->
 </nav>

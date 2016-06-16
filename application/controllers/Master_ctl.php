@@ -23,19 +23,19 @@ class Master_ctl extends CI_Controller {
 		$data["results"] = $this->menu_model->get_testkbnList();
 		$this->load->view('css_view');
 		$this->load->view('header_view');
-
+		$this->load->view('sidemenu_view', $data);
 		switch ($postdata['accesskbn']) {
 			case "profile":
 				$this->load->view('profedit_view');
 			break;
 			case "askmaster":
-				$this->load->view('askedit_view');
+				$this->load->view('askedit_view', $data);
 			break;
 			case "sikenkbn":
 				$this->load->view('sikenkbnedit_view');
 			break;
 		}
-		$this->load->view('content_view');
 		$this->load->view('footer_view');
+
 	}
 }
